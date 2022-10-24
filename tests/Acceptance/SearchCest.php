@@ -3,8 +3,7 @@
 namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
-use Tests\Support\Page\HomePage;
-use Tests\Support\Page\PageHome;
+
 
 class SearchCest
 {

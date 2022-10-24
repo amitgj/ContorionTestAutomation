@@ -9,13 +9,9 @@ class ShoppingCartPage
     private string $header = 'Shopping cart';
     public AcceptanceTester $tester;
 
-    public function clickOnCheckOut(): BillingAddressPage
+    public function clickOnCheckOut()
     {
-        $I= $this->tester;
-        $I->see('h1',($this->header));
-        $I->click($this->addToCartButton);
-        $I->click($this->shoppingCartButton);
-        return new BillingAddressPage();
+
     }
 
 

@@ -27,7 +27,7 @@ class CompleteOrderPage
     {
         $I= $this->tester;
         $I->click($this->continueButton);
-        return new HomePage();
+        return new HomePage($I);
     }
 
 
