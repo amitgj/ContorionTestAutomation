@@ -55,7 +55,6 @@ class ComposerStaticInit871ffef5f14a0b58341d5f42d0beb374
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
             'PhpOption\\' => 10,
-            'Page\\' => 5,
         ),
         'M' => 
         array (
@@ -182,10 +181,6 @@ class ComposerStaticInit871ffef5f14a0b58341d5f42d0beb374
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
-        ),
-        'Page\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'Masterminds\\' => 
         array (

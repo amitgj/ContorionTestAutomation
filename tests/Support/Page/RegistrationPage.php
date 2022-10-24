@@ -1,7 +1,9 @@
 <?php
-namespace Page;
+namespace Tests\Support\Page;
 use Tests\Support\AcceptanceTester;
-class RegistrationPage
+use Tests\Support\Components\AbstractComponent;
+
+class RegistrationPage extends AbstractComponent
 {
     public string $firstNameField = '#FirstName';
     public string $lastNameField = '#LastName';
@@ -20,7 +22,7 @@ class RegistrationPage
         string $email,
         string $password
 
-    ): HomePage
+    ): RegistrationSuccessPage
     {
         $I= $this->tester;
         $I ->fillField($this->firstNameField, $firstName);
@@ -29,7 +31,7 @@ class RegistrationPage
         $I ->fillField($this->passwordField, $password);
         $I ->fillField($this->confirmPasswordField, $password);
         $I ->click ($this->registerButton);
-        return  new HomePage($I);
+        return  new RegistrationSuccessPage($I);
     }
 
 }

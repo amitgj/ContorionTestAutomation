@@ -1,7 +1,9 @@
 <?php
-namespace Page;
-use Tests\Support\AcceptanceTester;
-class LoginPage extends \AbstractComponent
+
+use Tests\Support\Components\AbstractComponent;
+use Tests\Support\Page\HomePage;
+
+class LoginPage extends AbstractComponent
 {
     public string $userId = '#Email';
     public string $password = '#Password';
@@ -13,11 +15,10 @@ class LoginPage extends \AbstractComponent
     public function performLogin($userName, $password): HomePage
     {
         $I= $this->tester;
-        $I->amGoingTo('/');
         $I ->fillField($this->userId, $userName);
         $I ->fillField($this->password, $userName);
         $I ->click ($this->submitButton);
-        return new HomePage;
+        return new HomePage($I);
     }
 
 }

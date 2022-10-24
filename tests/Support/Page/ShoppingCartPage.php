@@ -1,5 +1,5 @@
 <?php
-namespace Page;
+namespace Tests\Support\Page;
 use Tests\Support\AcceptanceTester;
 class ShoppingCartPage
 {

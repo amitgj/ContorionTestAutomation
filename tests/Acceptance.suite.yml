@@ -9,4 +9,5 @@ modules:
     enabled:
         - PhpBrowser:
             url: https://demo.nopcommerce.com/
+        - Asserts
 step_decorators: ~

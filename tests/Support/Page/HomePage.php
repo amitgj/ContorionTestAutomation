@@ -1,8 +1,11 @@
 <?php
 
-namespace Page;
+namespace Tests\Support\Page;
 
-class HomePage extends \AbstractComponent
+use LoginPage;
+use Tests\Support\Components\AbstractComponent;
+
+class HomePage extends AbstractComponent
 {
     public string $loginLink = '.ico-login';
     public string $registrationLink = '.ico-register';
@@ -21,7 +24,7 @@ class HomePage extends \AbstractComponent
     {
         $I= $this->tester;
         $I->click($this->registrationLink);
-        return new RegistrationPage();
+        return new RegistrationPage($I);
     }
 
     public function searchForProduct($productName):SearchResultsPage

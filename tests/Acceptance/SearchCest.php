@@ -3,6 +3,8 @@
 namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
+use Tests\Support\Page\HomePage;
+use Tests\Support\Page\PageHome;
 
 class SearchCest
 {
@@ -14,20 +16,7 @@ class SearchCest
 
     public function searchTest(AcceptanceTester $I):void
     {
-        $fistName = 'Test';
-        $lastName = 'Test';
-        $email = 'Test@nppcommerce.com';
-        $password = 'test1234';
-//        $fistName = $_ENV[static::FIRST_NAME];
-//        $lastName = $_ENV[static::LAST_NAME];
-//        $email = $_ENV[static::USER_NAME];
-//        $password = $_ENV[static::USER_PASSWORD];
-        $I->amOnPage('/');
-        $homePage = new \Page\HomePage($I);
 
-        $registrationPage = $homePage->goToRegistrationPage();
-        $homePage =$registrationPage ->performRegistration($fistName,$lastName,$email,$password);
-        $searchPage = $homePage ->searchForProduct($this->productName);
     }
 
 }

@@ -2,16 +2,11 @@
     "require-dev": {
         "codeception/codeception": "^5.0",
         "codeception/module-phpbrowser": "*",
-        "codeception/module-asserts": "*",
+        "codeception/module-asserts": "^3.0",
         "codeception/module-webdriver": "^3.2"
     },
     "require": {
         "vlucas/phpdotenv": "^5.5"
-    },
-
-    "autoload":{
-        "psr-4":{
-            "Page\\":"src/"
-        }
     }
+
 }
